@@ -55,7 +55,7 @@ const Dashboard = ({ toggleDarkMode }) => {
 
   const handleUpdateTransaction = async (customOrderId, updatedStatus) => {
     try {
-      const response = await fetch(`https://school-payment-dashboard.onrender.com/api/transactions/update`, {
+      const response = await fetch(`http://localhost:5000/api/transactions/update`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
