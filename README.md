@@ -205,14 +205,14 @@ The frontend runs at http://localhost:3000.
 
 ## Deployment
 
-### Frontend Deployment 
-
-- Live Demo: The application is hosted on Netlify.
-- Access it here: https://dhruv-watch.netlify.app/
-
 ### Backend Deployment 
 
 - Live Demo: The application is hosted on Render.
-- Access it here: https://dhruv-watch.netlify.app/
+- Access it here: https://school-payment-dashboard.onrender.com/api/transactions
+
+### Frontend Deployment 
+
+- Live Demo: The application is hosted on Netlify.
+- Access it here: https://school-payment-dashboard.netlify.app/
 
 ---
