@@ -1,0 +1,191 @@
+/* Base CSS Variables */
+:root {
+    --primary-color: #4caf50;
+    --secondary-color: #2196f3;
+    --background-color: #fff;
+    --text-color: #333;
+    --button-hover-color: #45a049;
+    --input-border-color: #ccc;
+    --dark-background: #121212;
+    --dark-text-color: #fff;
+    --dark-button-background: #333;
+    --font-family: 'Arial', sans-serif;
+    --font-size: 16px;
+    --button-padding: 12px 24px;
+}
+
+/* Global Styles */
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: var(--dark-background);
+    color: var(--dark-text-color);
+}
+
+/* Home Page Styles */
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Send carousel behind other content */
+}
+
+.carousel-item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: slide 20s infinite;
+    object-fit: cover;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Carousel Animation */
+@keyframes slide {
+    0% {
+        opacity: 1;
+    }
+    33% {
+        opacity: 0;
+    }
+    66% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.content {
+    z-index: 1;
+    padding: 20px;
+}
+
+.home h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.home p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+/* Button Styles */
+.primary {
+    padding: var(--button-padding);
+    font-size: var(--font-size);
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.primary:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.05); /* Slight button enlargement on hover */
+}
+
+.primary:focus {
+    outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home {
+        padding: 20px;
+    }
+
+    .home h1 {
+        font-size: 2rem;
+    }
+
+    .home p {
+        font-size: 1rem;
+    }
+
+    .primary {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home h1 {
+        font-size: 1.8rem;
+    }
+
+    .primary {
+        padding: 8px 16px;
+    }
+}
+
+/* Dark Mode Styles */
+body.dark-mode .home h1 {
+    color: var(--dark-text-color);
+}
+
+body.dark-mode .primary {
+    background-color: var(--dark-button-background);
+    border: 1px solid var(--dark-text-color);
+}
+
+body.dark-mode .primary:hover {
+    background-color: var(--primary-color);
+}
+
+/* Success and Error Message Styles */
+.success-message, .error-message {
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.success-message {
+    background-color: #4caf50;
+    color: white;
+}
+
+.error-message {
+    background-color: #f44336;
+    color: white;
+}

@@ -1,0 +1,218 @@
+/* Define CSS Variables for Consistency */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #28a745;
+  --danger-color: #dc3545;
+  --hover-primary: #0056b3;
+  --hover-secondary: #218838;
+  --hover-danger: #c82333;
+  --border-color: #ccc;
+  --background-color-light: #f9f9f9;
+  --background-color-dark: #333;
+  --text-color-light: #333;
+  --text-color-dark: #fff;
+  --font-family: 'Arial', sans-serif;
+  --padding: 10px 20px;
+  --border-radius: 5px;
+}
+
+/* Global Styles */
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+/* Transactions List Styles */
+.transactions-list {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.transactions-table {
+  overflow-x: auto;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.transactions-table th,
+.transactions-table td {
+  padding: 12px 15px;
+  border: 1px solid var(--border-color);
+  text-align: left;
+}
+
+.transactions-table th {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.transactions-table td {
+  background-color: var(--background-color-light);
+  color: #000;
+}
+
+/* Button Styles */
+.update-btn, .submit-btn, .cancel-btn {
+  padding: var(--padding);
+  font-size: 16px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+
+}
+
+.update-btn {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.update-btn:hover {
+  background-color: var(--hover-primary);
+}
+
+.submit-btn {
+  background-color: var(--secondary-color);
+  color: white;
+  margin: 10px;
+}
+
+.submit-btn:hover {
+  background-color: var(--hover-secondary);
+}
+
+.cancel-btn {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.cancel-btn:hover {
+  background-color: var(--hover-danger);
+}
+
+/* Update Form Styling */
+.update-form {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background-color: var(--background-color-light);
+}
+
+.update-form label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--text-color-light);
+}
+
+.update-form input {
+  padding: 8px;
+  width: 100%;
+  margin-top: 5px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background-color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .transactions-list {
+    padding: 15px;
+  }
+
+  .transactions-table th,
+  .transactions-table td {
+    padding: 10px;
+  }
+
+  .update-btn, .submit-btn, .cancel-btn {
+    padding: 8px 15px;
+  }
+
+  .update-form {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .transactions-table th,
+  .transactions-table td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .update-form input {
+    font-size: 14px;
+  }
+
+  .update-btn, .submit-btn, .cancel-btn {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
+
+/* Dark Mode Adjustments */
+body.dark-mode .update-form {
+  background-color: var(--background-color-dark);
+  border-color: var(--border-color);
+}
+
+body.dark-mode .update-form label {
+  color: var(--text-color-dark);
+}
+
+body.dark-mode .update-form input {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+  border: 1px solid var(--border-color);
+}
+
+body.dark-mode .update-btn,
+body.dark-mode .submit-btn,
+body.dark-mode .cancel-btn {
+  border: none;
+  color: var(--text-color-dark);
+}
+
+body.dark-mode .update-btn:hover {
+  background-color: var(--hover-primary);
+}
+
+body.dark-mode .submit-btn:hover {
+  background-color: var(--hover-secondary);
+}
+
+body.dark-mode .cancel-btn:hover {
+  background-color: var(--hover-danger);
+}
+
+/* Success/Error Message Styling */
+.success-message, .error-message {
+  padding: 12px 20px;
+  margin-top: 15px;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  margin: 15px auto;
+}
+
+.success-message {
+  background-color: #28a745;
+  color: white;
+}
+
+.error-message {
+  background-color: #dc3545;
+  color: white;
+}

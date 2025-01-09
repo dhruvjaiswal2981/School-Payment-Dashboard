@@ -1,0 +1,153 @@
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --light-bg: #f8f9fa;
+  --dark-bg: #343a40;
+  --light-text: #212529;
+  --dark-text: #f8f9fa; /* Light color for dark mode */
+  --header-text: #333333; /* For headers */
+  --link-color: #007bff; /* Link color */
+  --link-hover-color: #0056b3; /* Link hover color */
+  --muted-text: #6c757d; /* For muted or secondary text */
+  --highlight-text: #f8d7da; /* For warning or highlighted text */
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-bg);
+  color: var(--light-text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+button.primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+button.danger {
+  background-color: var(--danger-color);
+  color: #fff;
+}
+
+input,
+select {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table th {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+h1, h2, h3 {
+  color: var(--header-text);
+  font-weight: bold;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+p {
+  color: var(--light-text);
+}
+
+p.muted {
+  color: var(--muted-text);
+}
+
+p.highlight {
+  color: var(--highlight-text);
+  background-color: var(--danger-color);
+  padding: 5px;
+  border-radius: 3px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+/* Dark Mode Specific Overrides */
+.dark-mode h1, .dark-mode h2, .dark-mode h3 {
+  color: var(--dark-text); /* Ensure headers are clearly visible in dark mode */
+}
+
+.dark-mode p {
+  color: var(--dark-text); /* Text color in dark mode */
+}
+
+.dark-mode p.muted {
+  color: var(--muted-text); /* Muted text in dark mode */
+}
+
+.dark-mode a {
+  color: var(--link-color); /* Link color in dark mode */
+}
+
+.dark-mode a:hover {
+  color: var(--link-hover-color); /* Hover color for links in dark mode */
+}
+
+.dark-mode .highlight {
+  color: var(--dark-text); /* Highlighted text in dark mode */
+  background-color: var(--highlight-text); /* More visible highlighted background */
+}
