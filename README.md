@@ -208,6 +208,7 @@ The frontend runs at http://localhost:3000.
 ### Backend Deployment 
 
 - Live Demo: The application is hosted on Render.
+- Base URL: https://school-payment-dashboard.onrender.com/api/transactions
 - Access it here: https://school-payment-dashboard.onrender.com/api/transactions
 
 ### Frontend Deployment 
