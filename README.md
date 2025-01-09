@@ -87,7 +87,7 @@ A web-based application for managing transactions, built with **Node.js** and **
 
 1. **Clone the Repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/dhruvjaiswal2981/School-Payment-Dashboard.git
    cd backend
 
 2. Install Dependencies
@@ -160,15 +160,15 @@ The frontend runs at http://localhost:3000.
     - Method: POST
     - URL: /add
     - Request Body:
-    ```json
+        ```json
         {
-        "collect_id": "C001",
-        "school_id": "S001",
-        "gateway": "PayPal",
-        "order_amount": 100.50,
-        "transaction_amount": 100.50,
-        "status": "Completed",
-        "custom_order_id": "ORD123456"
+            "collect_id": "C001",
+            "school_id": "S001",
+            "gateway": "PayPal",
+            "order_amount": 100.50,
+            "transaction_amount": 100.50,
+            "status": "Completed",
+            "custom_order_id": "ORD123456"
         }
     - Response: Success message with transaction ID.
 
@@ -176,9 +176,9 @@ The frontend runs at http://localhost:3000.
     - Method: PUT
     - URL: /update/:customOrderId
     - Request Body:
-    ```json
+        ```json
         {
-        "status": "Pending"
+            "status": "Pending"
         }
     - Response: Success message after update.
 
