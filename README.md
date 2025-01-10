@@ -13,6 +13,7 @@ A web-based application for managing transactions, built with **Node.js** and **
 - [Frontend Components](#frontend-components)
 - [Usage](#usage)
 - [Deployment](#Deployment)
+- [API Testing Instructions](#API Testing Instructions)
 
 ---
 
@@ -215,5 +216,45 @@ The frontend runs at http://localhost:3000.
 
 - Live Demo: The application is hosted on Vercel.
 - Access it here: https://school-payment-dashboard.vercel.app/
+
+---
+
+## API Testing Instructions
+
+### Using Postman
+
+1. Base URL for Deployed API: https://school-payment-dashboard.onrender.com/api/transactions/
+
+2. Examples:
+
+- Get All Transactions:
+
+https://school-payment-dashboard.onrender.com/api/transactions/
+
+![get-all-transactions](screenshots/get-all-transactions.PNG)
+
+
+- Get Transactions by School ID:
+
+https://school-payment-dashboard.onrender.com/api/transactions/school/S001
+
+![Get-Transactions-schoolID](screenshots/Get-Transactions-schoolID.PNG)
+
+
+- Add a Transaction:
+
+https://school-payment-dashboard.onrender.com/api/transactions/add
+
+![get-all-transactions-add](screenshots/get-all-transactions-add.PNG)
+
+
+- Update Transaction Status:
+
+https://school-payment-dashboard.onrender.com/api/transactions/update/:customOrderId
+
+3. Postman:
+
+- Import the provided API endpoints into Postman and replace the BASE_URL with the deployed link.
+- Test APIs with appropriate methods (GET, POST, PUT) and payloads.
 
 ---
