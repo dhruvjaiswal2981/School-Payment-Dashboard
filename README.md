@@ -13,7 +13,7 @@ A web-based application for managing transactions, built with **Node.js** and **
 - [Frontend Components](#frontend-components)
 - [Usage](#usage)
 - [Deployment](#Deployment)
-- [API Testing Instructions](#API Testing Instructions)
+- [API-Testing-Instructions](#API Testing Instructions)
 
 ---
 
