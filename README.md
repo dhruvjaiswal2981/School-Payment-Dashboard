@@ -213,7 +213,7 @@ The frontend runs at http://localhost:3000.
 
 ### Frontend Deployment 
 
-- Live Demo: The application is hosted on Netlify.
-- Access it here: https://school-payment-dashboard.netlify.app/
+- Live Demo: The application is hosted on Vercel.
+- Access it here: https://school-payment-dashboard.vercel.app/
 
 ---
